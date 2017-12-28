@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Pizza implements PizzaComponent {
 
     private String name;
+    private float price=0;
     private ArrayList<Ingredient> listIngredient = new ArrayList<>();
 
     public Pizza(String name) {
@@ -19,12 +20,22 @@ public class Pizza implements PizzaComponent {
 
     @Override
     public float getPrice() {
-        float price=0;
         for(int i=0;i<listIngredient.size();i++){
             price += listIngredient.get(i).getPrice();
         }
         return price;
     }
+
+    @Override
+    public void setName(String n) {
+        this.name=n;
+    }
+
+    @Override
+    public void setPrice(float p) {
+        this.price=p;
+    }
+
 
     public ArrayList<Ingredient> getListIngredient() {
         return listIngredient;
@@ -39,7 +50,7 @@ public class Pizza implements PizzaComponent {
         return "Pizza{" +
             "name='" + name + '\'' +
             ", listIngredient=" + listIngredient + '\'' +
-            ", Prix=" + this.getPrice() +
+            ", Prix=" + price +
             '}';
     }
 }

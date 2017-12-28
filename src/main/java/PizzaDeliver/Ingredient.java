@@ -21,6 +21,16 @@ public class Ingredient implements PizzaComponent {
     }
 
     @Override
+    public void setName(String n) {
+
+    }
+
+    @Override
+    public void setPrice(float p) {
+
+    }
+
+    @Override
     public String toString() {
         return "Ingredient{" +
             "name='" + name + '\'' +
