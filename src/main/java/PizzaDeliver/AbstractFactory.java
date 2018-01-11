@@ -10,7 +10,7 @@ public abstract class AbstractFactory {
             {
                 return FactoryHut.getFactoryHut();
             }
-            case "Domino" :
+            case "Dominos" :
             {
                 return FactoryDominos.getFactoryDominos();
             }
